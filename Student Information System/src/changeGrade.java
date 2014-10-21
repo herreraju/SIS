@@ -8,8 +8,6 @@ public class changeGrade
 	static String selectClass;
 
 	//Call the file
-	
-	//l
 	//Replace the original grade with the user input
 public static void GradeChange()
 	{
