@@ -3,7 +3,6 @@ public class Student
 	String firstName;
 	String lastName;
 	double GPA;
-	String GPAst;
 	String p1Class;
 	String p1Grade;
 	String p2Class;
@@ -11,12 +10,11 @@ public class Student
 	String p3Class;
 	String p3Grade;
 
-	public Student(String fn, String ln, double stg, String gs, String p1c, String p1g, String p2c, String p2g, String p3c, String p3g)
+	public Student(String fn, String ln, double stg, String p1c, String p1g, String p2c, String p2g, String p3c, String p3g)
 		{
 		firstName = fn;
 		lastName = ln;
 		GPA = stg;
-		GPAst = gs;
 		p1Class = p1c;
 		p1Grade = p1g;
 		p2Class = p2c;
@@ -35,10 +33,6 @@ public class Student
 	
 		public double getGPA() {
 			return GPA;
-		}
-	
-		public String getGPAst() {
-			return GPAst;
 		}
 	
 		public String getP1Class() {
@@ -75,10 +69,6 @@ public class Student
 	
 		public void setGPA(double gPA) {
 			GPA = gPA;
-		}
-	
-		public void setGPAst(String gPAst) {
-			GPAst = gPAst;
 		}
 	
 		public void setP1Class(String p1Class) {

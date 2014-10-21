@@ -29,9 +29,8 @@ public void addClasses()
 		String gii = file.next();
 		String ciii = file.next();
 		String giii = file.next();
-		classArray.add(new Student(ff, ll, 0.0,  "", ci, gi, cii, gii, ciii, giii));
+		classArray.add(new Student(ff, ll, 0.0, ci, gi, cii, gii, ciii, giii));
 		classArray.get(cvintsr).setGPA(calculateGPA(classArray.get(cvintsr)));
-		classArray.get(cvintsr).setGPAst(doubleToStringGPA(calculateGPA(classArray.get(cvintsr))));
 		cvintsr++;
 		}
 	}
