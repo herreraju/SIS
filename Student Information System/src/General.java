@@ -38,6 +38,6 @@ public static void printSIS()
 public static void main(String[] args) 
 	{
 	ImportTextFile.addClasses();
-	printSIS();
+	MainMenu.displayMainMethod();
 	}
 }
