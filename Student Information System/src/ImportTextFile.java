@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class ImportTextFile
 {
-public ArrayList<Student> classArray = new ArrayList<Student>();
-private Scanner file;
-public void addClasses()
+public static ArrayList<Student> classArray = new ArrayList<Student>();
+private static Scanner file;
+public static void addClasses()
 	{
 	try
 		{
@@ -34,7 +34,7 @@ public void addClasses()
 		cvintsr++;
 		}
 	}
-public double calculateSingGPA(String stv)
+public static double calculateSingGPA(String stv)
 	{
 	double slovinv = 0;
 	switch(stv) 
@@ -42,68 +42,82 @@ public double calculateSingGPA(String stv)
 		case "A+":
 			{
 			slovinv = 4.3;
+			break;
 			}
 		case "A":
 			{
 			slovinv = 4.0;
+			break;
 			}
 		case "A-":
 			{
 			slovinv = 3.7;
+			break;
 			}
 		case "B+":
 			{
-			slovinv = 3.3;	
+			slovinv = 3.3;
+			break;
 			}
 		case "B":
 			{
 			slovinv = 3.0;
+			break;
 			}
 		case "B-":
 			{
 			slovinv = 2.7;
+			break;
 			}
 		case "C+":
 			{
 			slovinv = 2.3;
+			break;
 			}
 		case "C":
 			{
 			slovinv = 2.0;
+			break;
 			}
 		case "C-":
 			{
 			slovinv = 1.7;
+			break;
 			}
 		case "D+":
 			{
 			slovinv = 1.3;
+			break;
 			}
 		case "D":
 			{
 			slovinv = 1.0;
+			break;
 			}
 		case "D-":
 			{
 			slovinv = 0.7;
+			break;
 			}
 		case "F":
 			{
 			slovinv = 0.0;
+			break;
 			}
 		default:
-			{	
+			{
+			System.out.println("Grade Entered Incorrectly");
 			}
 		}
 	return slovinv;
 	}
-public double calculateGPA(Student stuvf)
+public static double calculateGPA(Student stuvf)
 	{
 	double drdr = calculateSingGPA(stuvf.getP1Grade()) + calculateSingGPA(stuvf.getP2Grade()) + calculateSingGPA(stuvf.getP3Grade());
 	drdr = drdr / 3;
 	return drdr;
 	}
-public String doubleToStringGPA(double df)
+public static String doubleToStringGPA(double df)
 	{
 	df = df * 100.0;
     df = Math.round(df);
