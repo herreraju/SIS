@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import java.util.Collections;
 
 public class MainMenu
 	{
@@ -34,6 +35,12 @@ public class MainMenu
 	static JButton buttonSortStu = new JButton("Enter");
 	public static JComboBox<String> dropDownSortStu = new JComboBox<String>(preMadeArrayForSortStu);
 	public static JFrame frameSortStu = new JFrame("SortStu Menu");
+	
+	public static String[] preMadeArrayForClassChoice = new String[]
+				{"Algebra", "Biology", "English"};
+	static JButton buttonClassChoice = new JButton("Enter");
+	public static JComboBox<String> dropDownClassChoice = new JComboBox<String>(preMadeArrayForClassChoice);
+	public static JFrame frameClassChoice = new JFrame("Choose Class Menu");
 	
 	public static void displayMainMethod()
 		{
@@ -155,19 +162,36 @@ public class MainMenu
 					{
 					case 0:
 						{
+						Collections.sort(ImportTextFile.classArray, new LastNameSorter());
+						General.printSIS();
 						break;
 						}
 					case 1:
 						{
+						Collections.sort(ImportTextFile.classArray, new GPASorter());
+						General.printSIS();
 						break;
 						}
 					case 2:
 						{
+						displayClassChoice();
 						break;
 						}
 					}
 				}
 		});
 	frameSortStu.setVisible(true);
+	public static void displayClassChoice()
+		{
+		frameClassChoice.setSize(400, 100);
+		frameClassChoice.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameClassChoice.setResizable(false);
+		frameClassChoice.setLocationRelativeTo(null); // Sets JPanel to center of screen
+		final JPanel panelClassChoice = new JPanel();
+		frameClassChoice.add(panelClassChoice);
+		panelClassChoice.add(dropDownForGradSched);
+		panelClassChoice.add(buttonClassChoice);
+		buttonClassChoice.addActionListener(new ActionListener()
+		}
 	}
 }
