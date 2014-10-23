@@ -12,16 +12,29 @@ import javax.swing.JPanel;
 
 public class MainMenu
 	{
-	public static String[] preMadeArrayForMain = new String[]
-				{ "Add or Delete a Student", "Change Student Grades/Schedule", "Sort Students" };
+	public static String[] preMadeArrayForMain = new String[] { "Add or Delete a Student", "Change Student Grades/Schedule", "Sort Students" };
 	static JButton buttonMainm = new JButton("Enter");
 	public static JComboBox<String> dropDownForMain = new JComboBox<String>(preMadeArrayForMain);
 	public static JFrame frameMain = new JFrame("Main Menu");
+	
 	public static String[] preMadeArrayForAddDel = new String[]
 				{ "Add a Student", "Delete a Student"};
 	static JButton buttonAddDel = new JButton("Enter");
 	public static JComboBox<String> dropDownAddDel = new JComboBox<String>(preMadeArrayForAddDel);
 	public static JFrame frameAddDel = new JFrame("Add or Delete");
+	
+	public static String[] preMadeArrayForGradSched = new String[]
+			{ "Change Grade", "Change Schedule"};
+	static JButton buttonGradSched = new JButton("Enter");
+	public static JComboBox<String> dropDownForGradSched = new JComboBox<String>(preMadeArrayForGradSched);
+	public static JFrame frameGradSched = new JFrame("Change Grades/Schedule");
+	
+	public static String[] preMadeArrayForSortStu = new String[]
+			{"Sort by Last Name", "Sort by GPA", "Sort by Class"};
+	static JButton buttonSortStu = new JButton("Enter");
+	public static JComboBox<String> dropDownSortStu = new JComboBox<String>(preMadeArrayForSortStu);
+	public static JFrame frameSortStu = new JFrame("SortStu Menu");
+	
 	public static void displayMainMethod()
 		{
 		frameMain.setSize(400, 100);
@@ -43,14 +56,17 @@ public class MainMenu
 						case 0:
 							{
 							displayAddDel();
+							break;
 							}
 						case 1:
 							{
-							
+							displayGradSched();
+							break;
 							}
 						case 2:
 							{
-							
+							displaySortStu();
+							break;
 							}
 						}
 					}
@@ -77,13 +93,81 @@ public class MainMenu
 						{
 						case 0:
 							{
+							AddOrDelStudent.addStudentToArray();
+							break;
 							}
 						case 1:
 							{
+							AddOrDelStudent.deleteFromArray();
+							break;
 							}
 						}
 					}
 			});
 		frameAddDel.setVisible(true);
 		}
+	public static void displayGradSched()
+	{
+	frameGradSched.setSize(400, 100);
+	frameGradSched.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frameGradSched.setResizable(false);
+	frameGradSched.setLocationRelativeTo(null); // Sets JPanel to center of screen
+	final JPanel panelGradSched = new JPanel();
+	frameGradSched.add(panelGradSched);
+	panelGradSched.add(dropDownForGradSched);
+	panelGradSched.add(buttonGradSched);
+	buttonGradSched.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent arg0)
+				{
+				int GradSchedChoice = dropDownForGradSched.getSelectedIndex();
+				frameGradSched.dispose();
+				switch (GradSchedChoice)
+					{
+					case 0:
+						{
+						}
+					case 1:
+						{
+						}
+					}
+				}
+		});
+	frameGradSched.setVisible(true);
 	}
+	public static void displaySortStu()
+	{
+	frameSortStu.setSize(400, 100);
+	frameSortStu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frameSortStu.setResizable(false);
+	frameSortStu.setLocationRelativeTo(null); // Sets JPanel to center of screen
+	final JPanel panelSortStu = new JPanel();
+	frameSortStu.add(panelSortStu);
+	panelSortStu.add(dropDownSortStu);
+	panelSortStu.add(buttonSortStu);
+	buttonSortStu.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent arg0)
+				{
+				int SortStuChoice = dropDownSortStu.getSelectedIndex();
+				frameSortStu.dispose();
+				switch (SortStuChoice)
+					{
+					case 0:
+						{
+						break;
+						}
+					case 1:
+						{
+						break;
+						}
+					case 2:
+						{
+						break;
+						}
+					}
+				}
+		});
+	frameSortStu.setVisible(true);
+	}
+}
