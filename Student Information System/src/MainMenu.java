@@ -37,7 +37,7 @@ public class MainMenu
 	public static JFrame frameSortStu = new JFrame("SortStu Menu");
 	
 	public static String[] preMadeArrayForClassChoice = new String[]
-				{"Algebra", "Biology", "English"};
+				{"English, Biology, Algebra", "English, Algebra, Biology", "Algebra, Biology, English", "Algebra, English, Biology", "Biology, Algebra, English", "Biology, English, Algebra"};
 	static JButton buttonClassChoice = new JButton("Enter");
 	public static JComboBox<String> dropDownClassChoice = new JComboBox<String>(preMadeArrayForClassChoice);
 	public static JFrame frameClassChoice = new JFrame("Choose Class Menu");
