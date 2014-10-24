@@ -181,6 +181,7 @@ public class MainMenu
 				}
 		});
 	frameSortStu.setVisible(true);
+	}
 	public static void displayClassChoice()
 		{
 		frameClassChoice.setSize(400, 100);
@@ -189,9 +190,31 @@ public class MainMenu
 		frameClassChoice.setLocationRelativeTo(null); // Sets JPanel to center of screen
 		final JPanel panelClassChoice = new JPanel();
 		frameClassChoice.add(panelClassChoice);
-		panelClassChoice.add(dropDownForGradSched);
+		panelClassChoice.add(dropDownClassChoice);
 		panelClassChoice.add(buttonClassChoice);
 		buttonClassChoice.addActionListener(new ActionListener()
-		}
+			{
+			public void actionPerformed(ActionEvent arg0)
+				{
+				int SortClassChoice = dropDownClassChoice.getSelectedIndex();
+				frameClassChoice.dispose();
+				switch(SortClassChoice)
+				{
+				case 0:
+					{
+					break;
+					}
+				case 1:
+					{
+					break;
+					}
+				case 2:
+					{
+					break;
+					}
+				}
+			}
+		});
+		frameClassChoice.setVisible(true);
 	}
 }
