@@ -133,9 +133,13 @@ public class MainMenu
 					{
 					case 0:
 						{
+						changeGrade.chasStudent(GradSchedChoice);
+						break;
 						}
 					case 1:
 						{
+						changeGrade.chasStudent(GradSchedChoice);
+						break;
 						}
 					}
 				}
@@ -174,6 +178,7 @@ public class MainMenu
 						}
 					case 2:
 						{
+						Collections.sort(ImportTextFile.classArray, new LastNameSorter());
 						displayClassChoice();
 						break;
 						}
@@ -202,15 +207,38 @@ public class MainMenu
 				{
 				case 0:
 					{
-					
+					SortByClass.EBA();
+					SortByClass.IntegrateChange();
 					break;
 					}
 				case 1:
 					{
+					SortByClass.EAB();
+					SortByClass.IntegrateChange();
 					break;
 					}
 				case 2:
 					{
+					SortByClass.ABE();
+					SortByClass.IntegrateChange();
+					break;
+					}
+				case 3:
+					{
+					SortByClass.AEB();
+					SortByClass.IntegrateChange();
+					break;
+					}
+				case 4:
+					{
+					SortByClass.BAE();
+					SortByClass.IntegrateChange();
+					break;
+					}
+				case 5:
+					{
+					SortByClass.BEA();
+					SortByClass.IntegrateChange();
 					break;
 					}
 				}

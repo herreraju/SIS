@@ -14,7 +14,7 @@ public class SortByClass
 		{
 		for (Student fgr : ImportTextFile.classArray)
 			{
-			if (fgr.getP1Class() == "English")
+			if (fgr.getP1Class().equals("English"))
 				{
 				changedArray.add(fgr);
 				}
@@ -23,7 +23,7 @@ public class SortByClass
 		
 		for (Student fhgr :ImportTextFile.classArray)
 			{
-			if (fhgr.getP1Class() == "Biology")
+			if (fhgr.getP1Class().equals("Biology"))
 				{
 				changedArray.add(fhgr);
 				}
@@ -32,7 +32,7 @@ public class SortByClass
 		
 		for (Student fsgr :ImportTextFile.classArray)
 			{
-			if (fsgr.getP1Class() == "Algebra")
+			if (fsgr.getP1Class().equals("Algebra"))
 				{
 				changedArray.add(fsgr);
 				}
@@ -44,7 +44,7 @@ public class SortByClass
 		{
 		for (Student fsggr : ImportTextFile.classArray)
 			{
-			if (fsggr.getP1Class() == "English")
+			if (fsggr.getP1Class().equals("English"))
 				{
 				changedArray.add(fsggr);
 				}
@@ -53,7 +53,7 @@ public class SortByClass
 		
 		for (Student fshgr : ImportTextFile.classArray)
 			{
-			if (fshgr.getP1Class() == "Algebra")
+			if (fshgr.getP1Class().equals("Algebra"))
 				{
 				changedArray.add(fshgr);
 				}
@@ -62,7 +62,7 @@ public class SortByClass
 		
 		for (Student fssgr : ImportTextFile.classArray)
 			{
-			if (fssgr.getP1Class() == "Biology")
+			if (fssgr.getP1Class().equals("Biology"))
 				{
 				changedArray.add(fssgr);
 				}
@@ -75,7 +75,7 @@ public class SortByClass
 		{
 		for (Student fgrr : ImportTextFile.classArray)
 			{
-			if (fgrr.getP1Class() == "Algebra")
+			if (fgrr.getP1Class().equals("Algebra"))
 				{
 				changedArray.add(fgrr);
 				}
@@ -84,7 +84,7 @@ public class SortByClass
 		
 		for (Student fhhgr : ImportTextFile.classArray)
 			{
-			if (fhhgr.getP1Class() == "Biology")
+			if (fhhgr.getP1Class().equals("Biology"))
 				{
 				changedArray.add(fhhgr);
 				}
@@ -93,7 +93,7 @@ public class SortByClass
 		
 		for (Student ffsgr : ImportTextFile.classArray)
 			{
-			if (ffsgr.getP1Class() == "English")
+			if (ffsgr.getP1Class().equals("English"))
 				{
 				changedArray.add(ffsgr);
 				}
@@ -105,7 +105,7 @@ public class SortByClass
 		{
 		for (Student fjsggr : ImportTextFile.classArray)
 			{
-			if (fjsggr.getP1Class() == "Algebra")
+			if (fjsggr.getP1Class().equals("Algebra"))
 				{
 				changedArray.add(fjsggr);
 				}
@@ -114,7 +114,7 @@ public class SortByClass
 		
 		for (Student fkshgr : ImportTextFile.classArray)
 			{
-			if (fkshgr.getP1Class() == "English")
+			if (fkshgr.getP1Class().equals("English"))
 				{
 				changedArray.add(fkshgr);
 				}
@@ -123,7 +123,7 @@ public class SortByClass
 		
 		for (Student flssgr : ImportTextFile.classArray)
 			{
-			if (flssgr.getP1Class() == "Biology")
+			if (flssgr.getP1Class().equals("Biology"))
 				{
 				changedArray.add(flssgr);
 				}
@@ -136,7 +136,7 @@ public class SortByClass
 		{
 		for (Student fegr : ImportTextFile.classArray)
 			{
-			if (fegr.getP1Class() == "Biology")
+			if (fegr.getP1Class().equals("Biology"))
 				{
 				changedArray.add(fegr);
 				}
@@ -145,7 +145,7 @@ public class SortByClass
 		
 		for (Student fwhgr : ImportTextFile.classArray)
 			{
-			if (fwhgr.getP1Class() == "Algebra")
+			if (fwhgr.getP1Class().equals("Algebra"))
 				{
 				changedArray.add(fwhgr);
 				}
@@ -154,7 +154,7 @@ public class SortByClass
 		
 		for (Student fqsgr : ImportTextFile.classArray)
 			{
-			if (fqsgr.getP1Class() == "English")
+			if (fqsgr.getP1Class().equals("English"))
 				{
 				changedArray.add(fqsgr);
 				}
@@ -166,7 +166,7 @@ public class SortByClass
 		{
 		for (Student frsggr : ImportTextFile.classArray)
 			{
-			if (frsggr.getP1Class() == "Biology")
+			if (frsggr.getP1Class().equals("Biology"))
 				{
 				changedArray.add(frsggr);
 				}
@@ -175,7 +175,7 @@ public class SortByClass
 		
 		for (Student ftshgr : ImportTextFile.classArray)
 			{
-			if (ftshgr.getP1Class() == "English")
+			if (ftshgr.getP1Class().equals("English"))
 				{
 				changedArray.add(ftshgr);
 				}
@@ -184,7 +184,7 @@ public class SortByClass
 		
 		for (Student fyssgr : ImportTextFile.classArray)
 			{
-			if (fyssgr.getP1Class() == "Algebra")
+			if (fyssgr.getP1Class().equals("Algebra"))
 				{
 				changedArray.add(fyssgr);
 				}
@@ -195,6 +195,6 @@ public class SortByClass
 	public static void IntegrateChange()
 		{
 		ImportTextFile.classArray = changedArray;
+		General.printSIS();
 		}
 	}
-

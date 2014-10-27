@@ -15,7 +15,7 @@ public class AddOrDelStudent extends JFrame
 {
 	static JLabel instrv = new JLabel("          First Name            Last Name             1st Class                           2nd Class                         3rd Class");
 	static JButton addDelActCl = new JButton("Enter");
-	public static String[] strikstro = new String[]{"A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D"};
+	public static String[] strikstro = new String[]{"A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "F"};
 	static JTextField firstPName = new JTextField(8);
 	static JTextField lastPName = new JTextField(8);
 	static JTextField firPName = new JTextField(7);
@@ -48,6 +48,7 @@ public static void addStudentToArray()
 		{
 			public void actionPerformed(ActionEvent arg0)
 				{
+				frameAdd.dispose();
 				String fff1 = firstPName.getText();
 				String fff2 = lastPName.getText();
 				String fff3 = firPName.getText();
